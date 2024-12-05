@@ -4,7 +4,7 @@ FROM ubuntu:22.04
 # Update apt sources to use valid mirrors
 RUN sed -i 's|http://ports.ubuntu.com|http://archive.ubuntu.com|g' /etc/apt/sources.list && \
     apt-get update && \
-    apt-get install -y apache2 apache2-utils zip unzip curl && \
+    apt-get install -y apache2 apache2-utils zip unzip curl yum && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
